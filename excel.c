@@ -6725,10 +6725,8 @@ PHP_MINIT_FUNCTION(excel)
 	REGISTER_EXCEL_CLASS(Sheet,			sheet,			NULL);
 	REGISTER_EXCEL_CLASS(Format,		format,			excel_format_object_clone);
 	REGISTER_EXCEL_CLASS(Font,			font,			excel_font_object_clone);
-
-	// Fix for compiling with PHP7 and libxl-lin-3.6.2
-	// REGISTER_EXCEL_CLASS(AutoFilter,	autofilter,		NULL);
-	// REGISTER_EXCEL_CLASS(FilterColumn,	filtercolumn,	NULL);
+	REGISTER_EXCEL_CLASS(AutoFilter,	autofilter,		NULL);
+	REGISTER_EXCEL_CLASS(FilterColumn,	filtercolumn,	NULL);
 
 	REGISTER_EXCEL_CLASS_CONST_LONG(font, "NORMAL", SCRIPT_NORMAL);
 	REGISTER_EXCEL_CLASS_CONST_LONG(font, "SUBSCRIPT", SCRIPT_SUB);
